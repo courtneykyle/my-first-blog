@@ -9,21 +9,19 @@
   <body>
 
     <div>
-
-      <h1>Welcome to My Blog!</h1>
-      <h2>Created at DjangoGirls Sheffield</h2>
-
+        <h1>Courtney's Blog</h1>
     </div>
 
-    <div>
+    {% for post in posts %}
+      <div>
+          <h1><a href="">{{ post.title }}</a></h1>
+          <p>{{ post.text|linebreaks }}></p>
+          <p>published: {{ post.published_date }}</p>
 
-      <p>published: 20.02.2016, 13:53</p>
-      <p> Hi there!</p>
-      <p>It works!</p>
-      <p>My website is <a href="http://www.studiocourt.net">StudioCourt.net</a></p>
+      </div>
 
-    </div>
-    
+    {% endfor %}
+
 
   </body>
 
